@@ -1,12 +1,12 @@
 
 
 export const ArticlePlaceholder = ({ title, body }) => {
-
+    console.log(title)
     return (
         <div className="article_placeholder">
-            <div className="title">
+            <h1 className="title">
                 {title}
-            </div>
+            </h1>
             <div className="body">
                 {body}
             </div>

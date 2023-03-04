@@ -18,11 +18,14 @@ export const Articles = () => {
 
     }, [])
 
+    if (articlesArray.length === 0) {
+        return <div>Loading</div>
+    }
 
-    console.log(articlesArray)
     return (
         <div className="articles_container">
-            {articlesArray.map((index, post) => {
+            {articlesArray[0].map((post, index) => {
+
                 return <ArticlePlaceholder key={index} title={post.title} body={post.body} />
             })}
 
